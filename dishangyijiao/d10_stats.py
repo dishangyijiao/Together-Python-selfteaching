@@ -3,7 +3,7 @@ text_en = '''
 If we can only encounter each other rather than stay with each other then I wish we had never encountered
 '''
 
-def stats_text_en(text_en):
+def stats_text_en(text_en, count):
   if isinstance(text_cn, str):
     # 转换为数组字符串
     words_en = text_en.split()
@@ -18,7 +18,7 @@ def stats_text_en(text_en):
     cnt = collections.Counter()
     for word in words_en:
       cnt[word] += 1
-    print(cnt)
+    print(cnt.most_common(count))
   raise ValueError('text is not a string')
 
 
@@ -38,5 +38,5 @@ def stats_text_cn(text_cn):
     cnt = collections.Counter()
     for word in words_cn:
       cnt[word] += 1
-      print(cnt)
+      print(cnt.most_common(count))
   raise ValueError('text is not a string')
