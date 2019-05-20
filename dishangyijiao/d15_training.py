@@ -14,7 +14,6 @@ import re
 import pdb
 # 输入密码
 import getpass
-
 # 张小龙 2019年微信公开课演讲
 allen_zhang_url = "https://mp.weixin.qq.com/s/pLmuGoc4bZrMNl7MSoWgiA"
 
@@ -47,7 +46,6 @@ for word in words_cn:
 
 # 输出结果转换为string
 contents = "{}". format(cnt.most_common(100))
-
 # 输入发件人和收件人信息
 sender = input('输入发件人邮箱:')
 password = getpass.getpass('输入发件人邮箱密码(或授权码):')
